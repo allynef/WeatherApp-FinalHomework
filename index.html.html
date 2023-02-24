@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+    <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city"
+                autofocus="on"
+                autocomplete="off"
+                id="search-city"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <h1 id="current-city">
+          Paris, France
+        </h1>
+        <ul>
+          <li id="current-time"></li>
+          <li>
+            Partly Cloudy
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon float-left"
+              />
+              <div class="display-temperature">
+                <span class="temperature" id="current-temp">21</span
+                ><span class="units">
+                  <a href="#" id="cels-temp">°C</a> |
+                  <a href="#" id="fahren-temp">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>
+                Precipitation: 0%
+              </li>
+              <li>
+                Humidity: 77%
+              </li>
+              <li>
+                Wind: 8 km/h
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-group">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Today</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Mon</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Tue</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Wed</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Thu</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Fri</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-header">Sat</h4>
+                <p class="card-emojis">☀️</p>
+                <p class="card-temp">28°/16°</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="coder">Coded by Allyne Faustino</footer>
+      </div>
+    </div>
+    
+    <script src="src/app.js"></script>
+  </body>
+</html>
+  <!-- <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card">
+            <div class="input-form">
+              <form>
+                <input
+                  id="search-form"
+                  type="search"
+                  placeholder="Type a city"
+                />
+                <input id="search-city" type="submit" value="Search" />
+              </form>
+            </div>
+
+            <h1>
+              <div class="row first">
+                <div class="col-6" id="city-display">Paris, France</div>
+                <div class="third" id="current-time">Date and time</div>
+                
+                <span class="col-3" id="temp-display">
+                  <div class="col-7" id="current-temp">21°<span id="units"></div>
+                    <a style="font-size:20px;" href="null" id="celc-temp">ºC</a> |
+                    <a style="font-size:20px;" href="null" id="fahren-temp">ºF</a></span></span>
+                </div>
+                <div class="second">☀️ Mostly sunny</div>
+              </div>
+            </h1>
+          </div>
+          <br />
+
+          
+    <script src="src/app.js"></script>
+  </body> -->
+</html>
