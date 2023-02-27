@@ -43,6 +43,14 @@ let formatDate = `${day}, ${month} ${monthdate}, ${hours}:${minutes}`;
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = formatDate;
 
+//Code to make an API call to bring City and weather from OpenWeatherMap
+
+function search(event) {
+  let apiKey = "6ac39b605f8239ad2b0b01c884c8b5d0";
+  let city = "Campinas";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+}
+
 //Challenge 2 - Change the name of the City when searching
 function changeCity(event) {
   event.preventDefault();
