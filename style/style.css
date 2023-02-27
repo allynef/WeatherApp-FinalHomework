@@ -54,6 +54,10 @@ li {
   margin-bottom: 20px;
 }
 
+.weather-icon {
+  margin-left: 20px;
+}
+
 footer {
   text-align: center;
   font-size: 12px;
