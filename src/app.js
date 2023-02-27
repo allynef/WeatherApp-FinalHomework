@@ -46,7 +46,7 @@ currentTime.innerHTML = formatDate;
 //Challenge 2 - Change the name of the City when searching
 function changeCity(event) {
   event.preventDefault();
-  let searchInput = ddocument.querySelector("#search-city").value;
+  let searchInput = document.querySelector("#search-city");
   let newCity = document.querySelector("#current-city");
   newCity.innerHTML = `${searchInput.value}`;
 }
@@ -64,21 +64,29 @@ searchCity.addEventListener("submit", changeCity);
 // let searchCity = document.querySelector("#search-city");
 // searchCity.addEventListener("click", changeCity);
 
-//Challenge 3 - Change temperature over to Celsius or Fahrenheit - use fake data
-function changeToCelsius(event) {
-  event.preventDefault();
-  let celsiusTemp = document.getElementById("current-temp");
-  celsiusTemp.innerHTML = "27°";
-}
+// function changeCity(event) {
+//   event.preventDefault();
+//   let searchInput = document.querySelector("#search-city");
+//   let newCity = document.querySelector("#current-city");
+//   newCity.innerHTML = `${searchInput.value}`;
+// }
 
-function changeToFahren(event) {
-  event.preventDefault();
-  let fahrenTemp = document.getElementById("current-temp");
-  fahrenTemp.innerHTML = "65°";
-}
+//Challenge 3 - Change the temperature from Celsius to Fahrenheit
 
-let celsiusClick = document.querySelector("#cels-temp");
-celsiusClick.addEventListener("click", changeToCelsius);
+// function changeToCelsius(event) {
+//   event.preventDefault();
+//   let celsiusTemp = document.getElementById("current-temp");
+//   celsiusTemp.innerHTML = "21°";
+// }
 
-let fahrenClick = document.querySelector("#fahren-temp");
-fahrenClick.addEventListener("click", changeToFahren);
+// function changeToFahren(event) {
+//   event.preventDefault();
+//   let fahrenTemp = document.getElementById("current-temp");
+//   fahrenTemp.innerHTML = "65°";
+// }
+
+// let celsiusClick = document.querySelector("#cels-temp");
+// celsiusClick.addEventListener("click", changeToCelsius);
+
+// let fahrenClick = document.querySelector("#fahren-temp");
+// fahrenClick.addEventListener("click", changeToFahren);
