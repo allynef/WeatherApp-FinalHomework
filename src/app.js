@@ -43,12 +43,14 @@ let formatDate = `${day}, ${month} ${monthdate}, ${hours}:${minutes}`;
 let currentTime = document.querySelector("#date");
 currentTime.innerHTML = formatDate;
 
-let descriptionElement = document.querySelector("#description");
-
 //Code to make an API call to bring City and weather from OpenWeatherMap
 
 function displayWeatherCondition(response) {
   console.log(response.data);
+
+  let descriptionElement = document.querySelector("#description");
+  let iconElement = document.querySelector("#weather-icon");
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -58,8 +60,13 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+
+  descriptionElement = document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
