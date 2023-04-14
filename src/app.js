@@ -61,6 +61,12 @@ function displayForecast() {
 }
 
 // Code to make an API call to bring City and weather from OpenWeatherMap
+function getForecast(name) {
+  console.log(name);
+  let apiKey = "2bafb384o75t36038914ce6646b28159";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query={query}&key=${apiKey}`;
+  console.log(apiUrl);
+}
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -84,7 +90,7 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  console.log(response);
+  getForecast(response.data.name);
 }
 
 //Search city
