@@ -64,7 +64,7 @@ function displayForecast() {
 function getForecast(name) {
   console.log(name);
   let apiKey = "2bafb384o75t36038914ce6646b28159";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query={query}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${name}&key=${apiKey}`;
   console.log(apiUrl);
 }
 
