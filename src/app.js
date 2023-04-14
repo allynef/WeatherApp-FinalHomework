@@ -32,7 +32,8 @@ function formatDate(timestamp) {
 
 //Function to update HTML Forecast with API data
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -60,12 +61,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-// Code to make an API call to bring City and weather from OpenWeatherMap
+// Function to make an API call to bring City and weather from OpenWeatherMap
 function getForecast(name) {
   console.log(name);
   let apiKey = "2bafb384o75t36038914ce6646b28159";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${name}&key=${apiKey}`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -139,4 +141,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Campinas");
-displayForecast();
